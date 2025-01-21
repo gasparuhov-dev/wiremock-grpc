@@ -30,7 +30,7 @@ public class WiremockConfiguration {
         System.out.println("Port: " + grpcWireMockServer.port());
 
         mockService.stubFor(
-                method("/greeting")
+                method("greeting")
                         .withRequestMessage(equalToJson("{ \"name\":  \"Tom\" }"))
                         .willReturn(json("{ \"greeting\": \"Hi Tom from JSON\" }"))
         );
